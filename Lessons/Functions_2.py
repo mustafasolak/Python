@@ -3,6 +3,26 @@
 # ÖNCE FONKSİYON TANIMLANIR ARDINDAN FONKSİYON ÇAĞIRILIR.
 
 
+# N tane rasgele sayı üreten ve ekrana yazan fonksiyon
+# Fonksiyon kaç tane sayı üretileceği bilgisini kullanıcıdan alacak.
+# üretilecek sayı 1 ile 100 arasında olsun.
+
+
+import random
+def uretici(kacTane):
+    for sayac in range(kacTane):
+        rasgeleSayi = random.randint(1, 100)
+        print(rasgeleSayi)
+miktar = int(input("Kaç sayı üretilsin  ?= "))
+uretici(miktar)
+
+
+
+
+
+
+"""
+
 def ogrenciler(**isimler):
     print(isimler)
 
@@ -19,8 +39,6 @@ yazBakalim("ali","veli",1,2,True,3,4,5,6,7,8,9,isim="Ali")
 yazBakalim("ali","veli",1,2,True,3,4,5,6,7,8,9)
 
 
-
-"""
 # Varsayılan parametre kullanımı
 # Örnek : Kullanıcıdan alınan başlangıç, bitiş ve miktar
 # değerlerine göre ekrana çıktı veren program.
