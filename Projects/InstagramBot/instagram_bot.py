@@ -4,11 +4,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import Projects.InstagramBot.bilgiler
 import time
-
-from Projects.InstagramBot import bilgiler
-
+from Projects.InstagramBot.bilgiler import kullanici_adi
+from Projects.InstagramBot.bilgiler import parola
+from Projects.InstagramBot.bilgiler import webdriver_path
 
 def document_initialised(driver):
     return driver.execute_script("return initialised")
@@ -25,17 +24,17 @@ options = Options()
 options.page_load_strategy = 'eager'
 
 url = "https://www.instagram.com/"
-driver = webdriver.Chrome( executable_path="D:\Development\selenium_browser_drivers\chromedriver.exe", options=options)
+driver = webdriver.Chrome( executable_path=webdriver_path, options=options)
 
 driver.get( url )
 driver.maximize_window()
 
 try:
     username = eleman_sec(driver, By.NAME, "username")
-    username.send_keys(bilgiler.kullanici_adi)
+    username.send_keys(kullanici_adi)
 
     password = eleman_sec(driver, By.NAME, "password")
-    password.send_keys(bilgiler.parola)
+    password.send_keys(parola)
 
     btnGiris = eleman_sec(driver, By.XPATH, "/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[3]/button")
     btnGiris.click()

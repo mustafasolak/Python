@@ -3,6 +3,8 @@ This project created with Python - Selenium.
 
 The project opens instagram.com in web browser whichone you chose in step 2-3 and enters your credentials to username and password fields. Then it clicks some noticitation links. Finally it opens profile page to get followers count. You can see the result in console. 
 
+
+
 # How to setup
 **1.Install selenium module.**
 
