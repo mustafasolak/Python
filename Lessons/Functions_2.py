@@ -22,7 +22,7 @@ uretici(miktar)
 
 
 """
-
+# Parametrenin başına ** koymak istediğimiz kadar isimli parametre gönderebilmemizi sağlar.
 def ogrenciler(**isimler):
     print(isimler)
 
