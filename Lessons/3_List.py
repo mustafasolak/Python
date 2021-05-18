@@ -179,3 +179,11 @@ for yer in eski_yerlesimler :
 print("Listenin uzunluğu :", len(eski_yerlesimler) )
 for index in range( len(eski_yerlesimler) ):
     print( eski_yerlesimler[index] )
+
+"""
+aranan = input("ne aradınız  = ")
+if aranan in eski_yerlesimler:
+    print("Evet var")
+else:
+    print("yok")
+"""
