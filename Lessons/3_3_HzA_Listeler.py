@@ -11,7 +11,7 @@ print(arabalar)
 
 # Boş olmayan bir liste nasıl oluşturulur ?
 print("-"*10, "Boş olmayan bir liste nasıl oluşturulur ?")
-sayilar = [1,3,5,15,45]
+sayilar = [ 1,3,5,7,9,11,13,15 ]
 print(sayilar)
 
 # LİSTELERE ELEMAN EKLEME
@@ -19,7 +19,6 @@ print(sayilar)
 # Kullanımı : listeAdi.append(eklenecekDeger)
 
 print("-"*10, "LİSTELERE ELEMAN EKLEME")
-
 arabalar.append("Passat")
 print(arabalar)
 
@@ -47,7 +46,6 @@ arabalar.insert(-1, "Polo")
 print("\n--> arabalar.insert(-1, 'Polo')")
 print(arabalar)
 
-
 # LİSTENİN ELEMAN SAYISINI BULMAK
 # len() fonksiyonu bize listenin eleman sayısını verir.
 # Kullanımı : len(listeAdi)
@@ -69,6 +67,7 @@ print( "\narabalar[6] :", arabalar[6] )
 
 # Örnek: Polo modelini listenin sonundan sıra numarası kullanarak(Negative indexing) ekrana yazdırın
 print( "\narabalar[-2] :", arabalar[-2] )
+
 
 # Listenin belirli bir aralığına erişmek
 # Kullanımı : listeAdi[aralikBaslangic : aralikBitis]
@@ -95,7 +94,6 @@ print( arabalar[0:6] )
 # 2.yol
 print("\n--> arabalar[:6]")
 print( arabalar[:6] )
-
 
 # LİSTENİN ELEMAN(LAR)INI DEĞİŞTİRMEK
 # Kullanımı : listeAdi[elemanSiraNo] = yeniDeger
@@ -134,7 +132,8 @@ print("\narabalar[1:4] = ['X']")
 print(arabalar)
 
 arabalar[2:4] = [1,2,3,4,5]
-print("\n", arabalar)
+print("\narabalar[2:4] = [1,2,3,4,5]")
+print(arabalar)
 
 # LİSTEDEN ELEMAN SİLME
 # remove() fonksiyonu ile listeden belirttiğimiz elemanı silebiliriz
@@ -188,10 +187,11 @@ print(arabalar)
 arabalar.append("Polo")
 arabalar.append("Tuarek")
 print(arabalar)
+
 # del ile Listeyi Silme, yok etme
 # Dikkat ediniz!!! del ile bir liste silindikten sonra, silindiği satırdan itibaren artık o liste tanınmaz. Yani yorumlayıcı artık o listeyi yok etmiştir, kaldırmıştır.
 del arabalar
-# print(arabalar) # Bu satır hata verdiği için yorum satırı yaptık
+# print(arabalar) # bu satır hata verir. çünkü arabalar listesini hafızadan kaldırdık
 
 # Listenin elemanlarını yazdırma
 eski_yerlesimler = ["Göbeklitepe","Piramitler", "Stonehenge", "Mayalar", "Aztekler" , "İnkalar", "Machu Pichu"]
