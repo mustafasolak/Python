@@ -1,3 +1,4 @@
+"""
 # Boş bir liste 2 yolla oluşturulabilir.
 # 1.yol []
 print("-"*10, "[] İLE BOŞ LİSTE OLUŞTURMAK")
@@ -48,7 +49,7 @@ print("\n--> arabalar.insert(-1, 'Polo')")
 print(arabalar)
 
 
-# LİSTENİN ELEMAN SAYISINI BULMAK
+    # LİSTENİN ELEMAN SAYISINI BULMAK
 # len() fonksiyonu bize listenin eleman sayısını verir.
 # Kullanımı : len(listeAdi)
 print("-"*10, "LİSTENİN ELEMAN SAYISINI BULMAK")
@@ -193,10 +194,216 @@ print(arabalar)
 del arabalar
 # print(arabalar) # Bu satır hata verdiği için yorum satırı yaptık
 
+
 # Listenin elemanlarını yazdırma
 eski_yerlesimler = ["Göbeklitepe","Piramitler", "Stonehenge", "Mayalar", "Aztekler" , "İnkalar", "Machu Pichu"]
-# for eleman in listeAdi:
+# 8- a.	for in döngüsü ile listenin elemanlarını yazdırmaa.
+# Kullanımı
+# for degiskenAdi in listeAdi:
 #    print(eleman)
 
-for isim in eski_yerlesimler:
-    print(isim)
+for yerlesim_yeri in eski_yerlesimler:
+    print(yerlesim_yeri)
+
+meyveler = ["elma", "armut","erik", "kayısı" , "çilek"]
+# Örnek: meyveler listesinin elemanlarını for in döngüsü ile ekrana yazdırınız
+for meyve in meyveler:
+    print(meyve)
+
+sayilar = [ 1, 3, 5, 7, 9, 11]
+# Örnek : sayilar listesinin içindeki elemanların karesini alıp for in döngüsü ile ekrana yazdırın
+for sayi in sayilar:
+    print( "{}'in karesi = {}".format(sayi, sayi ** 2 ) )
+
+print( sayilar[0] )
+print( sayilar[1] )
+print( sayilar[2] )
+print( sayilar[3] )
+print( sayilar[4] )
+print( sayilar[5] )
+
+# 8-b.	Liste elemanlarının sıra numarasıyla elemanları yazdırma(for in range len )
+# Kullanımı :
+# for sayac in range(len(listeAdi)):
+#    print( listeAdi[sayac] )
+# Örnek : sayilar listesinin elemanlarını, elemanların sıra numarasını kullanarak for in döngüsü ile ekrana yazdırınız
+for sayac in range( len(sayilar) ):
+    print( sayilar[sayac])
+
+# Örnek : meyveler listesinin elemanlarını, elemanların sıra numarasını kullanarak for in döngüsü ile ekrana yazdırınız
+for siraNo in range( len(meyveler) ):
+    print( meyveler[siraNo])
+
+# 8-c.	while döngüsü ile listenin elemanlarını yazdırma
+# Örnek : 0'dan 5'e kadar olan sayıları while döngüsü ile ekrana yazdırın
+sayac = 0
+while sayac < 6:
+    print( sayac )
+    sayac += 1
+
+sayilar = [ 1, 3, 5, 7, 9, 11]
+# Örnek : sayilar listesinin içindeki elemanları while döngüsü ile ekrana yazdırın
+sayac = 0
+while sayac < len(sayilar):
+    print( sayilar[sayac])
+    sayac += 1
+
+# 9.	LİSTELERİ SIRALAMA
+# sort() metodu ile sıralama
+# Parametre almaz ise varsayılan olarak küçükten büyüğe sıralar.
+# reverse=True parametresi ile büyükten küçüğe sıralar.
+
+sayilar = [35, 15, 45, 3, -5, 68, 0]
+print("-"*30)
+# Örnek: sayilar listesini küçükten büyüğe sıralayınız
+print("Sıralamadan  önce sayilar listesi -> ", sayilar)
+sayilar.sort()
+print("Sıralamadan sonra sayilar listesi -> ", sayilar)
+
+print("-"*30)
+# Örnek: sayilar listesini büyükten küçüğe sıralayınız
+print("Sıralamadan  önce sayilar listesi -> ", sayilar)
+sayilar.sort(reverse=True)
+print("Sıralamadan sonra sayilar listesi -> ", sayilar)
+
+print("-"*30)
+meyveler = ["elma", "armut","erik", "kayısı" , "çilek", "ergin"]
+# Örnek: meyveler listesini büyükten küçüğe sıralayınız
+print("Sıralamadan  önce meyveler listesi -> ", meyveler)
+meyveler.sort(reverse=True)
+print("Sıralamadan sonra meyveler listesi -> ", meyveler)
+
+
+# 10.	LİSTELERİ KOPYALAMA
+# a.	copy() metodu ile
+print("-"*10, "LİSTELERİ KOPYALAMA")
+sayilar1 = [1,2,3,4,5]
+sayilar2 = sayilar1.copy()
+print("sayilar1 listesi :", sayilar1)
+print("sayilar2 listesi :", sayilar2)
+sayilar1[0] = 15
+sayilar2[3] = 45
+print("\nsayilar1 listesi :", sayilar1)
+print("sayilar2 listesi :", sayilar2)
+
+
+# DİKKAT. LİSTE KOPYALAMAK İÇİN BU YÖNTEM KULLANILMAZ. HATALIDIR.
+# ogrenciler1 = ["ali", "veli" ,"hasan"]
+# ogrenciler2 = ogrenciler1
+# print("\nogrenciler1 listesi :", ogrenciler1)
+# print("ogrenciler2 listesi :", ogrenciler2)
+#
+# ogrenciler1[0] = "nuri"
+# ogrenciler1[1] = "metin"
+# ogrenciler2[0] = "Mehmet"
+#
+# print("\nogrenciler1 listesi :", ogrenciler1)
+# print("ogrenciler2 listesi :", ogrenciler2)
+
+
+# DOĞRUSU BUDUR
+ogrenciler1 = ["ali", "veli" ,"hasan"]
+ogrenciler2 = ogrenciler1.copy()
+print("\nogrenciler1 listesi :", ogrenciler1)
+print("ogrenciler2 listesi :", ogrenciler2)
+
+ogrenciler1[0] = "nuri"
+ogrenciler2[1] = "kamil"
+
+print("\nogrenciler1 listesi :", ogrenciler1)
+print("ogrenciler2 listesi :", ogrenciler2)
+
+# 10-b.	list() metodu ile
+sehirler1 = ["izmir"," ankara"," istanbul"]
+sehirler2 = list(sehirler1)
+
+print("\nsehirler1 listesi :", sehirler1)
+print("sehirler2 listesi :", sehirler2)
+
+sehirler1[0] = "manisa"
+sehirler2[2] = "kayseri"
+
+print("\nsehirler1 listesi :", sehirler1)
+print("sehirler2 listesi :", sehirler2)
+
+print("-"*10, "11-LİSTELERİ BİRLEŞTİRME")
+# 11-a.	+ operatörü ile
+sayilar1 = [1,2,3,4,5]
+sayilar2 = [6,7,8,9,10]
+sayilar3 =  sayilar1 + sayilar2
+print("sayilar1 listesi :",sayilar1)
+print("sayilar2 listesi :",sayilar2)
+print("sayilar3 listesi :",sayilar3)
+
+
+# 11-b.	append() ile listenin elemanlarını diğer listenin sonuna ekleme
+sayilar1 = [2,4,6,8]
+sayilar2 = [1,3,5,7]
+
+# Örnek : append() metodu ile sayilar1 listesinin sonuna sayilar2 listesini ekleyin yani birleştirin
+for eleman in sayilar2:
+    sayilar1.append(eleman)
+print("\nsayilar1 listesi :",sayilar1)
+print("sayilar2 listesi :",sayilar2)
+
+# 11-c.	extend() metodu ile  listeleri birleştirme
+sayilar1 = [0,2,4,6]
+sayilar2 = [1,3]
+print("\nsayilar1 listesi :",sayilar1)
+print("sayilar2 listesi :",sayilar2)
+
+sayilar1.extend(sayilar2)
+sayilar2.extend(sayilar1)
+
+print("\nsayilar1 listesi :",sayilar1)
+print("sayilar2 listesi :",sayilar2)
+"""
+
+# Kullanımı : count(arananEleman)
+sayilar = [1,2,3,4,1,2,15,30,1,8]
+print( "sayilar listesinde 1 rakamı",sayilar.count(1),"kez geçiyor" )
+
+# if ... in ile listede bir elemanın olup olmadığını sorgulama
+# Kullanımı :  if arananEleman in listeAdi: şeklinde
+# Eğer arananEleman değişkeni içindeki değer belirtilen listede mevcut ise True döner, yok ise False döner.
+isimler = ["ali" ,"veli", "hasan", "nuri"]
+arananEleman = "veli"
+if arananEleman in isimler:
+    print("Aranan değer listede mevcut.")
+else:
+    print("!!! Aranan değer listede mevcut değil !!!")
+
+# Listedeki elemanın sıra numarasını bulma
+# Kullanımı : listeAdi.index(arananEleman)
+# !!! Eğer aranan eleman listede yok ise hata verir.
+# eğer aranan eleman listede ise o elemanın sıra numarasını verir.
+konum = isimler.index(arananEleman)
+print("Aranan eleman {}, listede {}. sırada.".format(arananEleman, konum))
+
+
+# örnek : Kamil ismini isimler listesinde aratın ve konumunu ekrana yazdırın
+arananEleman = "nuriş"
+if arananEleman in isimler:
+    konum = isimler.index(arananEleman)
+    print("Aranan eleman {}, listede {}. sırada.".format(arananEleman, konum))
+else:
+    print(arananEleman, "değeri listede yok !!!")
+
+
+# listeyi ters çevirme
+# Kullanımı : listeAdi.reverse()
+sayilar = [1,15,3,58,5,4]
+print(sayilar)
+sayilar.reverse()
+print(sayilar)
+
+
+
+
+
+
+
+
+
+
+
